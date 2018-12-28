@@ -1,0 +1,37 @@
+schemaVersion: "2.0.0"
+
+globalEnvVars:
+  - key: "PATH"
+    value: "/env/bin:$PATH"
+
+commandTests:
+
+# check that the ruby binary is in the correct location
+  - name: "ruby installation"
+    command: "which"
+    args: ["ruby"]
+    expectedOutput: ["/bin/ruby\n"]
+
+# check that the ruby binary is the correct version
+  - name: "ruby version"
+    command: "ruby"
+    args: ["--version"]
+    expectedOutput: ["ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-darwin18]"]
+
+# check that the jekyll binary is the correct version
+  - name: "jekyll version"
+    command: "ruby"
+    args: ["--version"]
+    expectedOutput: ["jekyll 3.8.5"]
+
+# check that the aws-cli binary is in the correct location
+  - name: "aws-cli installation"
+    command: "which"
+    args: ["aws"]
+    expectedOutput: ["/bin/aws\n"]
+
+# check that the aws binary is the correct version
+  - name: "aws version"
+    command: "aws"
+    args: ["--version"]
+    expectedOutput: ["1"]
