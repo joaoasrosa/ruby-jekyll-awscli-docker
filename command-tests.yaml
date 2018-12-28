@@ -16,11 +16,11 @@ commandTests:
   - name: "ruby version"
     command: "ruby"
     args: ["--version"]
-    expectedOutput: ["ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-darwin18]"]
+    expectedOutput: ["ruby 2.6.0"]
 
 # check that the jekyll binary is the correct version
   - name: "jekyll version"
-    command: "ruby"
+    command: "jekyll"
     args: ["--version"]
     expectedOutput: ["jekyll 3.8.5"]
 
@@ -34,4 +34,4 @@ commandTests:
   - name: "aws version"
     command: "aws"
     args: ["--version"]
-    expectedOutput: ["1"]
+    expectedOutput: ["aws-cli/1.16.81 Python/3.5.3 Linux/4.9.125-linuxkit botocore/1.12.71"]
