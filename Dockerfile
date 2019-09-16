@@ -1,4 +1,4 @@
-FROM ruby:2.6.0-slim
+FROM ruby:2.6.4-slim
 LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
 ENV RUBY_VERSION=2.6.0
